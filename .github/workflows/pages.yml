@@ -5,6 +5,7 @@ concurrency: {group: pages, cancel-in-progress: false}
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 4
     environment: {name: github-pages}
     steps:
       - uses: actions/checkout@v4
